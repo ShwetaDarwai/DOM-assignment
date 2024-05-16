@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 1px solid black;
+            height: 200px;
+            width: 500px;
+            position: relative;
+            left: 350px;
+
+        }
+        .bg{
+            border: 2px solid black;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            left: 170px;
+            top: 10px;
+            text-align: center;
+        }
+        .b{
+            height: 40px;
+            width: 70px;
+            position: relative;
+            left: 220px;
+            top: 40px;
+            border: 2px solid black;
+        }
+        .b:hover {
+            background:  aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="bg">
+            
+        </div>
+        <button id="btn" class="b"><b>Click</b></button>
+    </div>
+    <script>
+        let a = document.querySelector(".bg");
+        let b = document.getElementById("btn");
+
+        const colors =["pink","purple","lightblue","black","yellow","green","white","blue","red"]
+        let index = 0;
+
+        b.addEventListener("click",()=>{
+            a.style.backgroundColor = colors[index];
+            index = index + 1;
+            if (index > colors.length){
+                index = 0;
+            }
+        })
+
+    </script>
+</body>
+</html>

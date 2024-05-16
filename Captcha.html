@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capcha</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            height: 200px;
+            width: 300px;
+            position: relative;
+            left: 450px;
+            background-color: rgb(105, 145, 132);
+        }
+        #cap{
+            border: 1px solid black;
+            margin: 5px;
+        }
+        #button{
+            position: relative;
+            left: 130px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <label><b>Capcha-</b></label>
+            <input type="text" id="cap"><br><br>
+            <button type="button" id="button"><b>Click</b></button>
+        </form>
+    </div>
+    <script>
+        let capcha=document.getElementById("cap");
+        let newbutton=document.getElementById("button");
+        newbutton.addEventListener("click", ()=>{
+
+            capcha.value= Math.random().toString(36).substring(2,8);
+        })
+    </script>
+</body>
+</html>
+
+ 
